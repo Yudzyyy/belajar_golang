@@ -5,15 +5,27 @@ import "fmt"
 func main() {
 	nama := "Andi"
 	umur := 23
-	pekerjaan := "Programmer"
-	gaji := 15000000
-	aktif := true
-	tinggi := 170.5
 
 	fmt.Println("Nama:", nama)
-	fmt.Println("Umur:", umur)
-	fmt.Println("Pekerjaan:", pekerjaan)
-	fmt.Println("Gaji:", gaji)
-	fmt.Println("Aktif:", aktif)
-	fmt.Println("Tinggi:", tinggi)
+
+	if umur >= 18 {
+		fmt.Println("Status: Dewasa")
+	} else {
+		fmt.Println("Status: Anak-anak")
+	}
+
+	for i := 1; i <= 3; i++ {
+		fmt.Println("Perulangan ke-", i)
+	}
+
+	hari := "Sabtu"
+
+	switch hari {
+	case "Senin", "Selasa", "Rabu", "Kamis", "Jumat":
+		fmt.Println("Hari kerja")
+	case "Sabtu", "Minggu":
+		fmt.Println("Hari libur")
+	default:
+		fmt.Println("Hari tidak valid")
+	}
 }
